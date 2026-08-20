@@ -33,14 +33,16 @@ export const ContainerButtons = styled.div`
 `;
 
 export const ButtonHeroStyled = styled.a`
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  width: 170px;
+  min-width: 170px;
+  padding: 0 24px;
   height: 70px;
+  white-space: nowrap;
   background-color: #ffce0c;
   border: none;
   border-radius: 10px;
@@ -51,7 +53,8 @@ export const ButtonHeroStyled = styled.a`
     opacity: 0.8;
   }
   @media (max-width: 1520px) {
-    width: 140px;
+    min-width: 140px;
+    padding: 0 20px;
     height: 60px;
     font-size: 16px;
   }
@@ -60,23 +63,27 @@ export const ButtonHeroStyled = styled.a`
   }
   @media (max-width: 980px) {
     height: 40px;
-    width: 120px;
+    min-width: 120px;
+    padding: 0 16px;
   }
   @media (max-width: 768px) {
-    width: 105px;
+    min-width: 105px;
+    padding: 0 12px;
     font-size: 14px;
     gap: 5px;
     height: 35px;
   }
   @media (max-width: 668px) {
-    width: 105px;
+    min-width: 105px;
+    padding: 0 12px;
     font-size: 14px;
     gap: 5px;
     height: 30px;
   }
   @media (max-width: 420px) {
-    width: 105px;
-    font-size: 14px;
+    min-width: 0;
+    padding: 0 8px;
+    font-size: 12px;
     gap: 5px;
     height: 25px;
   }

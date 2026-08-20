@@ -61,26 +61,130 @@ export const ContainerIcons = styled.div`
         display: none;
     }
 `
-export const ContainerContacts = styled.div`
+export const Divider = styled.hr`
+    border: none;
+    border-top: 1px solid #DDDDDD;
+    margin-top: 32px;
+`
+
+export const ScheduleTitle = styled.h2`
     display: flex;
-    justify-content: flex-start;
-    gap: 24px;
-    margin-top: 28px;
     align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 28px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #01649C;
     @media (max-width: 668px) {
-        flex-direction: column;
+        font-size: 16px;
     }
 `
-export const Textinfo = styled.p`
+
+export const ScheduleGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 28px;
+    @media (max-width: 980px) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 28px;
+    }
+    @media (max-width: 668px) {
+        grid-template-columns: 1fr;
+        row-gap: 24px;
+    }
+`
+
+export const StoreSchedule = styled.div`
+    padding-inline: 16px;
+    border-left: 1px solid #DDDDDD;
+    &:nth-child(4n + 1) {
+        border-left: none;
+    }
+    @media (max-width: 980px) {
+        &:nth-child(4n + 1) {
+            border-left: 1px solid #DDDDDD;
+        }
+        &:nth-child(2n + 1) {
+            border-left: none;
+        }
+    }
+    @media (max-width: 668px) {
+        padding-inline: 0;
+        text-align: center;
+        border-left: none;
+        &:nth-child(2n + 1),
+        &:nth-child(4n + 1) {
+            border-left: none;
+        }
+    }
+`
+
+export const StoreName = styled.h3`
+    display: flex;
+    align-items: center;
+    gap: 6px;
     font-family: 'Open Sans';
-    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    color: #01649C;
+    /* Reserva duas linhas para que os horarios das quatro colunas
+       fiquem alinhados mesmo quando um nome quebra de linha. */
+    min-height: 40px;
+    @media (max-width: 980px) {
+        min-height: 0;
+    }
+    @media (max-width: 668px) {
+        justify-content: center;
+    }
+`
+
+export const ScheduleItem = styled.div`
+    margin-top: 16px;
+`
+
+export const ScheduleLabel = styled.p`
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 14px;
+    color: #283D50;
+    @media (max-width: 668px) {
+        justify-content: center;
+    }
+`
+
+export const ScheduleTime = styled.p`
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 14px;
+    color: #444444;
+    margin-top: 4px;
+    padding-left: 24px;
+    @media (max-width: 668px) {
+        padding-left: 0;
+    }
+`
+
+export const DeliveryNote = styled.p`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 28px;
+    font-family: 'Open Sans';
     font-weight: 400;
     font-size: 16px;
     color: #444444;
-    margin-top: 28px;
+    text-align: center;
     @media (max-width: 668px) {
-        text-align: center;
-        margin-bottom: 20px;
+        font-size: 14px;
     }
 `
 

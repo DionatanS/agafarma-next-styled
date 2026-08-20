@@ -5,7 +5,7 @@ export const ContainerCard = styled.div`
     display: flex;
     flex-direction: column;
     width: 490px;
-    height: 354px;
+    min-height: 354px;
     background-color: #fff;
     box-shadow: 0px 10px 29px rgba(68, 88, 144, 0.1);
     border-radius: 10px;
@@ -20,7 +20,7 @@ export const ContainerCard = styled.div`
     }
     @media (max-width: 860px) {
         width: 340px;
-        height: 370px;
+        min-height: 370px;
     }
     @media (max-width: 768px) {
         width: 300px;
@@ -55,6 +55,7 @@ export const ButtonMap = styled.button`
 export const ContainerImage = styled.img`
     width: 100%;
     height: 228px;
+    object-fit: cover;
     border: none;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -64,7 +65,8 @@ export const ContainerCardInfo = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-color: #fff;   
+    padding-bottom: 14px;
+    background-color: #fff;
 `
 
 export const TitleCard = styled.h1`

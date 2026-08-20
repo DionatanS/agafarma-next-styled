@@ -21,37 +21,26 @@ export default function Hero({ children }) {
       />
       <ContainerButtons>
         <ButtonHeroStyled
-          title="click aqui para falar com nós no whatsapp parada 47"
-          href="https://api.whatsapp.com/send?phone=5551999590358"
+          title="Clique aqui para falar conosco pelo WhatsApp de Alvorada."
+          href="https://api.whatsapp.com/send?phone=555134115000"
           target="_blank"
         >
           <ImageButton
             src="/images/icons/whatsapp-btn.png"
-            alt="click aqui para falar com nós no whatsapp parada 47"
+            alt="Clique aqui para falar conosco pelo WhatsApp de Alvorada."
           />{" "}
-          Parada 47
+          Alvorada
         </ButtonHeroStyled>
         <ButtonHeroStyled
-          title="click aqui para falar com nós no whatsapp parada 51"
-          href="https://api.whatsapp.com/send?phone=5551996387616"
+          title="Clique aqui para falar conosco pelo WhatsApp de Porto Alegre Zona Norte"
+          href="https://api.whatsapp.com/send?phone=5551984327210"
           target="_blank"
         >
           <ImageButton
             src="/images/icons/whatsapp-btn.png"
-            alt="click aqui para falar com nós no whatsapp parada 51"
+            alt="Clique aqui para falar conosco pelo WhatsApp de Porto Alegre Zona Norte"
           />{" "}
-          Parada 51
-        </ButtonHeroStyled>
-        <ButtonHeroStyled
-          title="click aqui para falar com nós no whatsapp parada Americana"
-          href="https://api.whatsapp.com/send?phone=5551980158168"
-          target="_blank"
-        >
-          <ImageButton
-            src="/images/icons/whatsapp-btn.png"
-            alt="click aqui para falar com nós no whatsapp parada Americana"
-          />{" "}
-          Americana
+          Porto Alegre Zona Norte
         </ButtonHeroStyled>
       </ContainerButtons>
     </ContainerHero>

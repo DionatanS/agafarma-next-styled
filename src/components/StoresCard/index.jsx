@@ -22,10 +22,10 @@ export default function StoresCard({
   hrefMap,
   hrefImage,
   hreflinkMap,
-  ourPhoneNumHref,
-  ourPhone,
 }) {
   const [exibirMapa, setExibirMapa] = useState(false);
+
+  const somenteDigitos = (numero) => String(numero ?? "").replace(/\D/g, "");
 
   const exibirNoMapa = () => {
     setExibirMapa(true);
@@ -39,11 +39,15 @@ export default function StoresCard({
     <>
       {!exibirMapa ? (
         <ContainerCard>
-          <ButtonMap title="click aqui para ver no mapa" onClick={exibirNoMapa}>
+          <ButtonMap
+            title={`Clique aqui para ver a loja ${Title} no mapa.`}
+            onClick={exibirNoMapa}
+          >
             Ver no Mapa
           </ButtonMap>
           <ContainerImage
-            title="Imagem da loja agafarma"
+            title={`Fachada da loja Agafarma ${Title}.`}
+            alt={`Fachada da loja Agafarma ${Title}.`}
             src={`images/${hrefImage}`}
           />
           <ContainerCardInfo>
@@ -52,7 +56,7 @@ export default function StoresCard({
               <AdressCard
                 target="_blank"
                 href={`${hrefMap}`}
-                title="click aqui para ir para o nosso endereço"
+                title={`Clique aqui para abrir o endereço da loja ${Title} no Google Maps.`}
               >
                 {Adress}
               </AdressCard>
@@ -65,13 +69,12 @@ export default function StoresCard({
               >
                 Telefone:{" "}
                 <a
-                  title="click aqui e nos ligue"
+                  title={`Clique aqui para ligar para a loja ${Title}.`}
                   style={{ color: "#0165CF" }}
-                  href={`tel:${PhoneNumHref}`}
+                  href={`tel:${somenteDigitos(PhoneNumHref)}`}
                 >
                   {Phone}
                 </a>
-                , <a href={`tel:${ourPhoneNumHref}`}>{ourPhoneNumHref}</a>
               </span>
               <span
                 style={{
@@ -82,7 +85,7 @@ export default function StoresCard({
               >
                 WhatsApp:{" "}
                 <a
-                  title="click aqui e fale com nós no whatsapp"
+                  title={`Clique aqui para falar conosco pelo WhatsApp da loja ${Title}.`}
                   target="_blank"
                   href={`https://api.whatsapp.com/send?phone=${WhatsAppNumHref}`}
                   style={{ color: "#0165CF" }}
@@ -92,11 +95,11 @@ export default function StoresCard({
               </span>
               <LinkImageWhatsIcon
                 target="_blank"
-                title="click aqui para entrar no whatsapp"
+                title={`Clique aqui para falar conosco pelo WhatsApp da loja ${Title}.`}
                 href={`https://api.whatsapp.com/send?phone=${WhatsAppNumHref}`}
               >
                 <ImageWhatsIcon
-                  alt="icone do whatsapp"
+                  alt={`Ícone do WhatsApp da loja ${Title}.`}
                   src="/images/icons/whatsAppCard.png"
                 />
               </LinkImageWhatsIcon>
@@ -109,9 +112,14 @@ export default function StoresCard({
             width="100%"
             height="100%"
             src={`${hreflinkMap}`}
+            title={`Mapa com a localização da loja Agafarma ${Title}.`}
+            referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           ></iframe>
-          <ButtonMap title="click aqui para voltar" onClick={voltar}>
+          <ButtonMap
+            title={`Clique aqui para voltar aos dados da loja ${Title}.`}
+            onClick={voltar}
+          >
             Voltar
           </ButtonMap>
         </ContainerCard>
